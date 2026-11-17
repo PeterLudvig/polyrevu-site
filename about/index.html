@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About PolyRevu</title>
+<meta name="description" content="How PolyRevu reads many public sources about places to eat and drink and turns them into transparent scores: what a score means, what we read, what we hold back, and where we don't have coverage yet.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0716;background-image:radial-gradient(ellipse at 80% -10%,rgba(224,118,46,.14),transparent 55%),radial-gradient(ellipse at 0% 30%,rgba(120,80,200,.10),transparent 50%);background-repeat:no-repeat;color:#e7e5e4;font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7}
+a{color:#f2b14c;text-underline-offset:3px}
+.top{display:flex;justify-content:space-between;align-items:center;max-width:48rem;margin:0 auto;padding:20px 24px}
+.brand{font-family:Fraunces,Georgia,"Times New Roman",serif;font-weight:600;font-size:1.3rem;color:#f6f3ff;text-decoration:none}
+.soon{font-size:.8rem;font-weight:600;color:#f2b14c;border:1px solid rgba(242,177,76,.3);background:rgba(242,177,76,.1);border-radius:999px;padding:4px 12px}
+.wrap{max-width:48rem;margin:0 auto;padding:32px 24px 72px}
+.col{max-width:42rem}
+.eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#f2b14c;margin:0 0 10px}
+h1{font-family:Fraunces,Georgia,"Times New Roman",serif;font-weight:600;font-size:clamp(2.25rem,6vw,3.75rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 18px;color:#fafaf9}
+.lead{font-size:1.1rem;color:#d6d3d1;max-width:36rem;margin:0}
+section{margin-top:56px}
+h2{font-family:Fraunces,Georgia,"Times New Roman",serif;font-weight:600;font-size:1.7rem;line-height:1.2;letter-spacing:-.01em;margin:0 0 14px;color:#fafaf9}
+p{margin:0 0 14px}
+ul{margin:0 0 14px;padding-left:1.3rem}
+li{margin-bottom:8px}
+li::marker{color:#f2b14c}
+strong{font-weight:600;color:#f5f5f4}
+code{background:rgba(255,255,255,.08);padding:.1em .35em;border-radius:4px;font-size:.92em}
+dl{display:grid;grid-template-columns:1fr;gap:12px;margin:0 0 16px}
+dl div{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);border-radius:12px;padding:14px 16px}
+dt{font-weight:600;color:#f5f5f4}
+dd{margin:4px 0 0;font-size:.85rem;line-height:1.45;color:#a8a29e}
+.ramp{display:flex;height:10px;border-radius:999px;overflow:hidden;margin:6px 0 6px;background:linear-gradient(to right,hsl(0 82% 35%),hsl(16 88% 50%) 50%,hsl(40 88% 47%) 70%,hsl(58 84% 45%) 80%,hsl(122 78% 40%) 90%,hsl(128 80% 42%))}
+.ramp-l{display:flex;justify-content:space-between;font-size:.75rem;color:#a8a29e;margin-bottom:14px}
+.callout{border:1px solid rgba(242,177,76,.25);background:rgba(242,177,76,.06);border-radius:16px;padding:24px}
+.muted h2{font-size:1.3rem;color:#d6d3d1}
+.muted,.muted p{color:#a8a29e}
+footer{border-top:1px solid rgba(255,255,255,.1);margin-top:64px;padding-top:20px;font-size:.85rem;color:#a8a29e}
+@media (min-width:640px){dl{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="top">
+  <a class="brand" href="/">PolyRevu</a>
+  <span class="soon">Coming soon</span>
+</div>
+
+<div class="wrap">
+  <header class="col">
+    <p class="eyebrow">About</p>
+    <h1>How PolyRevu scores</h1>
+    <p class="lead">We read what people have publicly written and shown about a place, and turn it into scores you can inspect. A stated method and visible gaps are what make a score worth trusting — so here is what a score means, what we read, what we hold back, and where we don't have coverage yet.</p>
+  </header>
+
+  <section class="col" id="how-we-score">
+    <p class="eyebrow">The score</p>
+    <h2>What a score means</h2>
+    <p>A PolyScore is a synthesis, not one reviewer's opinion. It says where opinion about something sits on a sentiment scale from 0 to 100.</p>
+    <div class="ramp" role="img" aria-label="Score scale from 0, all negative, to 100, all positive"></div>
+    <div class="ramp-l"><span>0 — everything we read leaned negative</span><span>100 — it all leaned positive</span></div>
+    <p>It describes how opinion leans, not how big, famous or expensive a place is. Beside it we show:</p>
+    <ul>
+      <li><strong>Agreement</strong> — how much the sources agree with one another. A mixed picture is shown as mixed, never smoothed over.</li>
+      <li><strong>Source breadth</strong> — how many kinds of source stand behind a score, so one built on a wide base is distinguishable from a thin one.</li>
+    </ul>
+    <p>No ads influence any of it; the ranking is the score.</p>
+  </section>
+
+  <section class="col" id="what-is-scored">
+    <p class="eyebrow">More than one number</p>
+    <h2>Scores for the things you actually ask about</h2>
+    <p>A single number for a whole restaurant hides most of what people say. So a place is scored at several levels:</p>
+    <dl>
+      <div><dt>The place overall</dt><dd>one score for the venue as a whole</dd></div>
+      <div><dt>Four categories</dt><dd>food, service, atmosphere and price</dd></div>
+      <div><dt>Specific things</dt><dd>a dish, a drink, the patio, the wait — whatever people actually discuss</dd></div>
+      <div><dt>Their qualities</dt><dd>the crust of the pizza, the speed of the service</dd></div>
+    </dl>
+    <p>Specific things roll up into general ones: remarks about the crust and the toppings count toward the pizza, and the pizza counts toward the food. You can ask the general question or the specific one and see what the answer rests on.</p>
+  </section>
+
+  <section class="col" id="sources">
+    <p class="eyebrow">What we read</p>
+    <h2>The sources we read</h2>
+    <p>We synthesize across several kinds of public source, and keep them apart so you can see what each one says.</p>
+    <dl>
+      <div><dt>Reviews</dt><dd>mainstream reviewer volume at scale</dd></div>
+      <div><dt>Editorial</dt><dd>professional critics and review desks</dd></div>
+      <div><dt>Blogs</dt><dd>independent and enthusiast writing</dd></div>
+      <div><dt>Forums</dt><dd>community discussion and local knowledge</dd></div>
+      <div><dt>Photos</dt><dd>what the room and the plates actually look like</dd></div>
+      <div><dt>Video</dt><dd>walkthroughs and first-person visits</dd></div>
+    </dl>
+    <p>From each source we keep short structured notes: which place, what was discussed, and whether the remark leaned favourable or not. We do not keep copies of other people's pages, and we do not republish their words or images. We name sources as provenance.</p>
+  </section>
+
+  <section class="col" id="care">
+    <p class="eyebrow">What we hold back</p>
+    <h2>When we don't publish a score</h2>
+    <ul>
+      <li><strong>One voice is not a consensus.</strong> A score is published only when independent sources stand behind it. Until then it is held, and we say so.</li>
+      <li><strong>Serious claims need corroboration.</strong> A remark about health, safety or conduct is not shown on the strength of a single report.</li>
+      <li><strong>The right place, or nothing.</strong> A passage that may be about the restaurant next door is held back rather than counted.</li>
+    </ul>
+  </section>
+
+  <section class="col" id="coverage">
+    <div class="callout">
+      <p class="eyebrow">Honest gaps</p>
+      <h2>Where we don't have coverage yet</h2>
+      <p>A score is only as good as what we were able to read, so we say where we fall short rather than imply coverage we don't have.</p>
+      <ul>
+        <li>We're focused on New York City to start, and we're expanding outward from there.</li>
+        <li>A newer or quieter venue may not yet have enough sources for a confident read — when that's the case, the source-breadth signal shows it instead of hiding it.</li>
+        <li>Some categories and neighborhoods are better covered than others today; the holdouts shrink as we read more.</li>
+      </ul>
+      <p>Visible holdouts are part of the method, not a footnote.</p>
+    </div>
+  </section>
+
+  <section class="col" id="site-owners">
+    <p class="eyebrow">For site owners</p>
+    <h2>Our crawler</h2>
+    <p>If you run a website, you may see requests from our crawler. It identifies itself, obeys <code>robots.txt</code>, and can be turned away with one line. What it reads, how it behaves and how to opt out are on the <a href="/about/crawler-notice/">crawler notice</a> page.</p>
+  </section>
+
+  <section class="col muted" id="origin">
+    <p class="eyebrow">The origin</p>
+    <h2>Where PolyRevu started</h2>
+    <p>PolyRevu started on a block in Chelsea. The problem was ordinary: too many opinions scattered across too many places, and no honest way to reconcile them into a decision you could trust.</p>
+    <p>So we built the thing we wanted — something that reads widely, reasons over what it finds, and shows its work.</p>
+  </section>
+
+  <footer class="col">PolyRevu · <a href="mailto:data@polyrevu.com">data@polyrevu.com</a> · <a href="/about/crawler-notice/">Crawler notice</a></footer>
+</div>
+</body>
+</html>

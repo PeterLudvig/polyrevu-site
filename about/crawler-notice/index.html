@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PolyRevu crawler notice</title>
+<meta name="description" content="PolyRevu's web crawler, PolyRevuHonestFetchBot: what it reads, how it behaves, and how to opt out.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0716;background-image:radial-gradient(ellipse at 80% -10%,rgba(224,118,46,.14),transparent 55%),radial-gradient(ellipse at 0% 30%,rgba(120,80,200,.10),transparent 50%);background-repeat:no-repeat;color:#e7e5e4;font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7}
+a{color:#f2b14c;text-underline-offset:3px}
+.top{display:flex;justify-content:space-between;align-items:center;max-width:48rem;margin:0 auto;padding:20px 24px}
+.brand{font-family:Fraunces,Georgia,"Times New Roman",serif;font-weight:600;font-size:1.3rem;color:#f6f3ff;text-decoration:none}
+.top nav a{font-size:.9rem;font-weight:600;color:#f6f3ff;text-decoration:none;border:1px solid rgba(247,223,214,.2);border-radius:999px;padding:6px 14px}
+.top nav a:hover,.top nav a:focus-visible{color:#f2b14c;border-color:rgba(242,177,76,.5)}
+.wrap{max-width:48rem;margin:0 auto;padding:32px 24px 72px}
+.col{max-width:42rem}
+.eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#f2b14c;margin:0 0 10px}
+h1{font-family:Fraunces,Georgia,"Times New Roman",serif;font-weight:600;font-size:clamp(2.1rem,5.5vw,3.4rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 18px;color:#fafaf9}
+.lead{font-size:1.1rem;color:#d6d3d1;max-width:36rem;margin:0}
+section{margin-top:48px}
+h2{font-family:Fraunces,Georgia,"Times New Roman",serif;font-weight:600;font-size:1.55rem;line-height:1.2;letter-spacing:-.01em;margin:0 0 14px;color:#fafaf9}
+p{margin:0 0 14px}
+ul{margin:0 0 14px;padding-left:1.3rem}
+li{margin-bottom:8px}
+li::marker{color:#f2b14c}
+code{background:rgba(255,255,255,.08);padding:.1em .35em;border-radius:4px;font-size:.92em;color:#f5f5f4}
+pre{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 16px;overflow-x:auto;font-size:.9rem;line-height:1.5;color:#f5f5f4;margin:0 0 14px}
+.callout{border:1px solid rgba(242,177,76,.25);background:rgba(242,177,76,.06);border-radius:16px;padding:24px}
+footer{border-top:1px solid rgba(255,255,255,.1);margin-top:64px;padding-top:20px;font-size:.85rem;color:#a8a29e}
+</style>
+</head>
+<body>
+<div class="top">
+  <a class="brand" href="/">PolyRevu</a>
+  <nav><a href="/about/">About</a></nav>
+</div>
+
+<div class="wrap">
+  <header class="col">
+    <p class="eyebrow">For site owners</p>
+    <h1>Our crawler</h1>
+    <p class="lead">PolyRevu is building a guide to restaurants and other places to eat and drink, based on what people have publicly written about them. The site is not yet open to the public. This page says what our crawler reads, how it behaves, and how to turn it away.</p>
+  </header>
+
+  <section class="col" id="bot">
+    <p class="eyebrow">Identification</p>
+    <h2>How to recognise it</h2>
+    <p>If you run a website, you may see requests from <code>PolyRevuHonestFetchBot</code>. Its full identification is:</p>
+    <pre>PolyRevuHonestFetchBot/1.0 (+https://polyrevu.com/about/crawler-notice; contact: data@polyrevu.com)</pre>
+    <p>It always identifies itself with this name. It never pretends to be a browser or another crawler.</p>
+  </section>
+
+  <section class="col">
+    <p class="eyebrow">What it reads</p>
+    <h2>What it does</h2>
+    <ul>
+      <li>It reads individual public pages that discuss a specific restaurant or venue: for example an article, a guide, or the venue's own website and menu.</li>
+      <li>From a page it records short structured notes: which venue, what was discussed, and whether the remark was favourable or not.</li>
+      <li>It does not keep copies of your pages or your text, and it does not republish your writing.</li>
+    </ul>
+  </section>
+
+  <section class="col">
+    <p class="eyebrow">Manners</p>
+    <h2>How it behaves</h2>
+    <ul>
+      <li>It reads and obeys <code>robots.txt</code>, including <code>Crawl-delay</code>.</li>
+      <li>It waits at least two seconds between requests to the same site and fetches only a small number of pages per site.</li>
+      <li>It does not log in, does not go behind paywalls, and does not submit forms.</li>
+    </ul>
+  </section>
+
+  <section class="col" id="opt-out">
+    <div class="callout">
+      <p class="eyebrow">Opt out</p>
+      <h2>How to turn it away</h2>
+      <p>To stop our crawler from reading your site, add this to your <code>robots.txt</code>:</p>
+      <pre>User-agent: PolyRevuHonestFetchBot
+Disallow: /</pre>
+      <p>You can also write to us and we will stop fetching your site and remove what we derived from it.</p>
+    </div>
+  </section>
+
+  <section class="col">
+    <p class="eyebrow">Contact</p>
+    <h2>Questions or concerns</h2>
+    <p>Questions, concerns, or a request to stop: <a href="mailto:data@polyrevu.com">data@polyrevu.com</a>. Please include your domain name.</p>
+  </section>
+
+  <footer class="col">PolyRevu · <a href="mailto:data@polyrevu.com">data@polyrevu.com</a> · <a href="/about/">About</a></footer>
+</div>
+</body>
+</html>
